@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cicinnus.cateye">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeNoAnimation">
+        <activity android:name="com.cicinnus.cateye.base.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--网页-->
+        <activity android:name=".base.BaseWebViewActivity" />
+        <!--分类查找-->
+        <activity
+            android:name=".module.movie.search_movie.SearchMovieActivity"
+            android:screenOrientation="portrait" />
+        <!--热门口碑电影-->
+        <activity
+            android:name=".module.movie.find_movie.fixedboard_movie.hot_good_comment.HotGoodCommentActivity"
+            android:screenOrientation="portrait" />
+        <!--最受期待榜单-->
+        <activity
+            android:name=".module.movie.find_movie.fixedboard_movie.most_expect.MostExpectMovieActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoAnimation" />
+        <!--TOP100-->
+        <activity android:name=".module.movie.find_movie.fixedboard_movie.top_100.TopHundredMovieActivity" />
+        <!--海外电影-->
+        <activity
+            android:name=".module.movie.find_movie.fixedboard_movie.oversea_movie.OverseaMovieActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoAnimation" />
+        <!--获奖电影-->
+        <activity
+            android:name=".module.movie.find_movie.awards_movie.AwardsMovieActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoAnimation" />
+        <!--奖项列表-->
+        <activity
+            android:name=".module.movie.find_movie.awards_movie.awards_list.AwardsListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoAnimation" />
+        <!--热映/待映电影列表-->
+        <activity
+            android:name=".module.movie.find_movie.fixedboard_movie.oversea_movie.oversea_movie_total_list.OverSeaMovieListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoAnimation" />
+        <!--电影详情-->
+        <activity
+            android:name=".module.movie.movie_detail.MovieDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+        <!--预告片-->
+        <activity
+            android:name=".module.movie.movie_video.MovieVideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <!--影人资料-->
+        <activity
+            android:name=".module.movie.movie_star.MovieStarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+        <!--电影原声-->
+        <activity
+            android:name=".module.movie.movie_detail.movie_soundtrack.MovieSoundTrackActivity"
+            android:screenOrientation="portrait" />
+        <!--影片资料-->
+        <activity
+            android:name=".module.movie.movie_detail.movie_resource.MovieResourceActivity"
+            android:screenOrientation="portrait" />
+        <!--电影资讯-->
+        <activity android:name=".module.movie.movie_detail.movie_information.MovieInformationActivity"
+            android:screenOrientation="portrait"/>
+        <!--电影话题-->
+        <activity android:name=".module.movie.movie_detail.movie_topic.MovieTopicActivity"
+            android:screenOrientation="portrait"/>
+        <!--所有长评-->
+        <activity android:name=".module.movie.movie_detail.movie_long_comment.MovieLongCommentActivity" />
+        <!--所有专业评论-->
+        <activity android:name=".module.movie.movie_detail.movie_pro_comment.MovieProCommentActivity" />
+    </application>
+
+</manifest>

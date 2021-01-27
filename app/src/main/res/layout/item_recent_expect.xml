@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="129dp"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_12">
+
+    <FrameLayout
+        android:layout_width="74dp"
+        android:layout_height="117dp">
+
+        <ImageView
+            android:id="@+id/iv_movie_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/iv_movie_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            tools:src="@drawable/ic_yellow_angle" />
+
+        <TextView
+            android:id="@+id/tv_movie_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            tools:text="1" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_movie_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/sp_16"
+            tools:text="电影名" />
+
+        <TextView
+            android:id="@+id/tv_movie_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxLines="1"
+            tools:text="主演名字" />
+
+        <TextView
+            android:id="@+id/tv_movie_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2017-xx-xx大陆上映" />
+
+        <TextView
+            android:id="@+id/tv_total_wish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            tools:text="总想看人数" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本月新增想看"
+            android:textColor="@color/text_yellow"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv_new_wish"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/text_yellow"
+            tools:text="124" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/bg_tv_buy"
+            android:drawableLeft="@drawable/ic_wish"
+            android:drawablePadding="@dimen/dp_4"
+            android:text="想看"
+            android:textColor="@color/colorAccent" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

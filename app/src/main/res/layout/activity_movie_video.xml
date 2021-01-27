@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:src="@drawable/ic_video_back" />
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+            android:id="@+id/videoplayer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+
+        <FrameLayout
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14">
+
+            <View
+                android:id="@+id/view_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_gravity="bottom"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="330dp"
+                android:layout_height="43dp"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:layout_marginRight="@dimen/dp_14">
+
+                <TextView
+                    android:id="@+id/tv_video_info"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="视频信息"
+                    android:textColor="@color/text_gray_deep"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_video_comment"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_video_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="评论"
+                        android:textColor="@color/text_gray_deep"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_video_comment_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_video_comment"
+                        android:background="@drawable/bg_comment_count"
+                        android:paddingLeft="@dimen/dp_6"
+                        android:paddingRight="@dimen/dp_6"
+                        android:textColor="@color/white"
+                        android:textSize="8sp"
+                        tools:text="12" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_video_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</FrameLayout>
