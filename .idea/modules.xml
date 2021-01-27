@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/qinggua_desktop.iml" filepath="$PROJECT_DIR$/.idea/qinggua_desktop.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/qinggua_desktop.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/qinggua_desktop.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/qinggua_android.iml" filepath="$PROJECT_DIR$/.idea/modules/qinggua_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/qinggua_android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/qinggua_android.app.iml" />
     </modules>
   </component>
 </project>
