@@ -98,6 +98,11 @@ public class HotMovieListFragment extends BaseFragment<HotMovieListPresenter> im
                     //ci参数默认为20，headline参数为0
                     mPresenter.getMoreHotMovieList(20, 0, builder.toString());
                 } else {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     hotMovieListAdapter.loadMoreEnd();
                 }
             }

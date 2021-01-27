@@ -42,10 +42,10 @@ public class HotMovieListAdapter extends BaseMultiItemQuickAdapter<HotMovieListB
         GlideManager.loadImage(mContext, imgUrl, (ImageView) helper.getView(R.id.iv_hot_img));
 
         //显示3D和IMAX的标签
-        if (item.getVer().contains("IMAX 3D")) {
+        if (item.getVer() != null && item.getVer().contains("IMAX 3D")) {
             helper.setImageResource(R.id.iv_ver, R.drawable.ic_3d_imax);
 
-        } else if (item.getVer().contains("3D")) {
+        } else if (item.getVer() != null && item.getVer().contains("3D")) {
             helper.setImageResource(R.id.iv_ver, R.drawable.ic_3d);
 
         }
