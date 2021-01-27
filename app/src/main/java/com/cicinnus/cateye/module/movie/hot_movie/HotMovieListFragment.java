@@ -1,5 +1,6 @@
 package com.cicinnus.cateye.module.movie.hot_movie;
 
+import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -98,12 +99,17 @@ public class HotMovieListFragment extends BaseFragment<HotMovieListPresenter> im
                     //ci参数默认为20，headline参数为0
                     mPresenter.getMoreHotMovieList(20, 0, builder.toString());
                 } else {
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                    try{
+                        hotMovieListAdapter.loadMoreEnd();
+                    }catch (Exception e){
+                        try {
+                            Thread.sleep(1000);
+                        } catch (Exception e2) {
+                            System.out.println(e2);
+                            hotMovieListAdapter.loadMoreEnd();
+                        }
+                        System.out.println(e);
                     }
-                    hotMovieListAdapter.loadMoreEnd();
                 }
             }
         });
